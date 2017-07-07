@@ -7,22 +7,22 @@
       <xsd:import schemaLocation="http://localhost:40143/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceSMS" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_ObtenerPersona_InputMessage">
-    <wsdl:part name="parameters" element="tns:ObtenerPersona" />
+  <wsdl:message name="IService1_SendSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
   </wsdl:message>
-  <wsdl:message name="IService1_ObtenerPersona_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ObtenerPersonaResponse" />
+  <wsdl:message name="IService1_SendSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="ObtenerPersona">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerPersona" message="tns:IService1_ObtenerPersona_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerPersonaResponse" message="tns:IService1_ObtenerPersona_OutputMessage" />
+    <wsdl:operation name="SendSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendSMS" message="tns:IService1_SendSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendSMSResponse" message="tns:IService1_SendSMS_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="ObtenerPersona">
-      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerPersona" style="document" />
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendSMS" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

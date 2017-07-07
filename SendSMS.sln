@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSWebService", "SMSWebServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceSMS", "WcfServiceSMS\WcfServiceSMS.csproj", "{21423C5B-2032-44C9-A609-97BE24DBCFEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendSMSXmlRpc", "SendSMSXmlRpc\SendSMSXmlRpc.csproj", "{AEF4162D-31C0-48F0-9F63-CCF4C5A3703B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{21423C5B-2032-44C9-A609-97BE24DBCFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21423C5B-2032-44C9-A609-97BE24DBCFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21423C5B-2032-44C9-A609-97BE24DBCFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF4162D-31C0-48F0-9F63-CCF4C5A3703B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF4162D-31C0-48F0-9F63-CCF4C5A3703B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF4162D-31C0-48F0-9F63-CCF4C5A3703B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF4162D-31C0-48F0-9F63-CCF4C5A3703B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

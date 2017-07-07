@@ -38,12 +38,12 @@ namespace SMSWebService
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            var identidad = textIdent.Text;
+            var conex = textIdent.Text;
 
             using (WSSms.Service1Client client = new WSSms.Service1Client())
             {
-                var persona = client.ObtenerPersona(identidad);
-                var nombre = persona.Nombre;
+                var buscar = client.SendSMS(conex);
+                var usuario = buscar.Usuario;
 
             }
         }

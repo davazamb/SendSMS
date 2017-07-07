@@ -17,7 +17,7 @@ namespace SMSWebService.WSSms {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseResponse", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceSMS")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SMSWebService.WSSms.Persona))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SMSWebService.WSSms.ParametroSMS))]
     public partial class BaseResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -27,7 +27,7 @@ namespace SMSWebService.WSSms {
         private string MensajeErrorField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MensajeOkField;
+        private string MensajeOKField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -53,14 +53,14 @@ namespace SMSWebService.WSSms {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MensajeOk {
+        public string MensajeOK {
             get {
-                return this.MensajeOkField;
+                return this.MensajeOKField;
             }
             set {
-                if ((object.ReferenceEquals(this.MensajeOkField, value) != true)) {
-                    this.MensajeOkField = value;
-                    this.RaisePropertyChanged("MensajeOk");
+                if ((object.ReferenceEquals(this.MensajeOKField, value) != true)) {
+                    this.MensajeOKField = value;
+                    this.RaisePropertyChanged("MensajeOK");
                 }
             }
         }
@@ -77,38 +77,86 @@ namespace SMSWebService.WSSms {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Persona", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceSMS")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ParametroSMS", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceSMS")]
     [System.SerializableAttribute()]
-    public partial class Persona : SMSWebService.WSSms.BaseResponse {
+    public partial class ParametroSMS : SMSWebService.WSSms.BaseResponse {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EdadField;
+        private string ClaveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
+        private string DestinatarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemitenteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Edad {
+        public string Clave {
             get {
-                return this.EdadField;
+                return this.ClaveField;
             }
             set {
-                if ((this.EdadField.Equals(value) != true)) {
-                    this.EdadField = value;
-                    this.RaisePropertyChanged("Edad");
+                if ((object.ReferenceEquals(this.ClaveField, value) != true)) {
+                    this.ClaveField = value;
+                    this.RaisePropertyChanged("Clave");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
+        public string Destinatario {
             get {
-                return this.NombreField;
+                return this.DestinatarioField;
             }
             set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
+                if ((object.ReferenceEquals(this.DestinatarioField, value) != true)) {
+                    this.DestinatarioField = value;
+                    this.RaisePropertyChanged("Destinatario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mensaje {
+            get {
+                return this.MensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
+                    this.MensajeField = value;
+                    this.RaisePropertyChanged("Mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remitente {
+            get {
+                return this.RemitenteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemitenteField, value) != true)) {
+                    this.RemitenteField = value;
+                    this.RaisePropertyChanged("Remitente");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
                 }
             }
         }
@@ -118,11 +166,11 @@ namespace SMSWebService.WSSms {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WSSms.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ObtenerPersona", ReplyAction="http://tempuri.org/IService1/ObtenerPersonaResponse")]
-        SMSWebService.WSSms.Persona ObtenerPersona(string Identificacion);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendSMS", ReplyAction="http://tempuri.org/IService1/SendSMSResponse")]
+        SMSWebService.WSSms.ParametroSMS SendSMS(string envioSMS);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ObtenerPersona", ReplyAction="http://tempuri.org/IService1/ObtenerPersonaResponse")]
-        System.Threading.Tasks.Task<SMSWebService.WSSms.Persona> ObtenerPersonaAsync(string Identificacion);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendSMS", ReplyAction="http://tempuri.org/IService1/SendSMSResponse")]
+        System.Threading.Tasks.Task<SMSWebService.WSSms.ParametroSMS> SendSMSAsync(string envioSMS);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -152,12 +200,12 @@ namespace SMSWebService.WSSms {
                 base(binding, remoteAddress) {
         }
         
-        public SMSWebService.WSSms.Persona ObtenerPersona(string Identificacion) {
-            return base.Channel.ObtenerPersona(Identificacion);
+        public SMSWebService.WSSms.ParametroSMS SendSMS(string envioSMS) {
+            return base.Channel.SendSMS(envioSMS);
         }
         
-        public System.Threading.Tasks.Task<SMSWebService.WSSms.Persona> ObtenerPersonaAsync(string Identificacion) {
-            return base.Channel.ObtenerPersonaAsync(Identificacion);
+        public System.Threading.Tasks.Task<SMSWebService.WSSms.ParametroSMS> SendSMSAsync(string envioSMS) {
+            return base.Channel.SendSMSAsync(envioSMS);
         }
     }
 }

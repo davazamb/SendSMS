@@ -1,4 +1,4 @@
-﻿namespace SMSWebService
+﻿namespace SendSMSXmlRpc
 {
     partial class Form1
     {
@@ -37,122 +37,90 @@
             this.textUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSend = new System.Windows.Forms.Button();
-            this.textIdent = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textMessage
             // 
-            this.textMessage.Location = new System.Drawing.Point(33, 186);
+            this.textMessage.Location = new System.Drawing.Point(28, 184);
             this.textMessage.Multiline = true;
             this.textMessage.Name = "textMessage";
             this.textMessage.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textMessage.Size = new System.Drawing.Size(269, 84);
-            this.textMessage.TabIndex = 13;
+            this.textMessage.TabIndex = 22;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 170);
+            this.label4.Location = new System.Drawing.Point(25, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 16;
+            this.label4.TabIndex = 25;
             this.label4.Text = "Message";
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(114, 103);
+            this.textPassword.Location = new System.Drawing.Point(109, 101);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(175, 20);
-            this.textPassword.TabIndex = 10;
+            this.textPassword.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 106);
+            this.label3.Location = new System.Drawing.Point(46, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 23;
             this.label3.Text = "Password";
             // 
             // textPhone
             // 
-            this.textPhone.Location = new System.Drawing.Point(114, 129);
+            this.textPhone.Location = new System.Drawing.Point(109, 127);
             this.textPhone.Name = "textPhone";
             this.textPhone.Size = new System.Drawing.Size(175, 20);
-            this.textPhone.TabIndex = 11;
+            this.textPhone.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 132);
+            this.label2.Location = new System.Drawing.Point(25, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 12;
+            this.label2.TabIndex = 21;
             this.label2.Text = "Phone Number";
             // 
             // textUserName
             // 
-            this.textUserName.Location = new System.Drawing.Point(114, 77);
+            this.textUserName.Location = new System.Drawing.Point(109, 75);
             this.textUserName.Name = "textUserName";
             this.textUserName.Size = new System.Drawing.Size(175, 20);
-            this.textUserName.TabIndex = 8;
+            this.textUserName.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 80);
+            this.label1.Location = new System.Drawing.Point(46, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 18;
             this.label1.Text = "UserName";
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(227, 276);
+            this.btnSend.Location = new System.Drawing.Point(222, 274);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
-            this.btnSend.TabIndex = 15;
+            this.btnSend.TabIndex = 24;
             this.btnSend.Text = "Enviar";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // textIdent
-            // 
-            this.textIdent.Location = new System.Drawing.Point(71, 339);
-            this.textIdent.Name = "textIdent";
-            this.textIdent.Size = new System.Drawing.Size(151, 20);
-            this.textIdent.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 344);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Conex.";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(228, 339);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 19;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 384);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textIdent);
+            this.ClientSize = new System.Drawing.Size(319, 308);
             this.Controls.Add(this.textMessage);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textPassword);
@@ -163,7 +131,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSend);
             this.Name = "Form1";
-            this.Text = "SMS WebService";
+            this.Text = "SMS Xml";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,9 +149,6 @@
         private System.Windows.Forms.TextBox textUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox textIdent;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnBuscar;
     }
 }
 

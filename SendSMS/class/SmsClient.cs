@@ -6,23 +6,23 @@ namespace SmsClient
 {
     public class SendSms
     {
-        public string send(string clientId, string clientPassword, string ani, string dnis, string msg)
+        public string send(string usuario, string clave, string remitente, string destinatario, string mensaje)
         {
             string result = null;
             try
             {
                 HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Concat(new string[]
                 {
-                    "http://ubaid.tk/sms/sms.aspx?uid=",
-                    clientId,
+                    "http://localhost:40143/Service1.svc",
+                    usuario,
                     "&pwd=",
-                    clientPassword,
+                    clave,
                     "&msg=",
-                    ani,
+                    remitente,
                     "&phone=",
-                    dnis,
+                    destinatario,
                     "&provider=way2sms",
-                    msg,
+                    mensaje,
                     "&provider=way2sms",
                 }));
                 HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
