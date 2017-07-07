@@ -33,7 +33,7 @@ namespace SmsClient
             }
             catch (Exception ex)
             {
-                result = "2";
+                result = ex.Message;
             }
             return result;
         }
